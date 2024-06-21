@@ -12,4 +12,4 @@ This is a simple navbar component for your website. It provides a navigation men
 
 To use the navbar component, follow these steps:
 
-1. Include the CSS and JavaScript files in your HTML document:
+1. Include HTML, JS, and SCSS into your project.
