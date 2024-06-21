@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #000;
+}
+
+.navbar {
+  max-width: 40vw;
+}
+.navbar input {
+  display: none;
+}
+.navbar label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 5;
+  top: 20px;
+  left: 20px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  padding: 10px 0;
+  overflow: hidden;
+}
+.navbar label .bar {
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  transition: all 0.5s ease-in-out;
+}
+.navbar label.checked {
+  background-color: black;
+}
+.navbar label.checked .bar {
+  background-color: white;
+}
+.navbar label.checked .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.navbar label.checked .bar:nth-child(2) {
+  transform: translateX(-50px);
+}
+.navbar label.checked .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+.navbar .nav_links {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-end;
+  padding: 20vh 0;
+  align-items: flex-start;
+  background-color: white;
+  z-index: 1;
+  transform: translateX(-50vw);
+  transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.74, 1);
+  padding-left: 5vw;
+  list-style: none;
+}
+.navbar .nav_links li {
+  margin: 5vh 0;
+}
+.navbar .nav_links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  transition: all 0.5s ease-in-out;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.navbar .nav_links a:hover {
+  color: red;
+}
+.navbar .nav_links.visible {
+  transform: translateX(0);
+}/*# sourceMappingURL=styles.css.map */

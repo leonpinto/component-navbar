@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+
+        <input type="checkbox" name="toggle" id="toggle"/>
+        <label class="toggle_btn" for="toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+        </label>
+        <ul class="nav_links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    const toggle = document.querySelector('#toggle');
+    const toggle_btn = document.querySelector('.toggle_btn');
+    const nav_links = document.querySelector('.nav_links');
+
+    toggle.addEventListener('change', () => {
+
+        if(toggle.checked) {
+            nav_links.classList.add('visible');
+            toggle_btn.classList.add('checked');
+        } else {
+            toggle_btn.classList.remove('checked');
+            nav_links.classList.remove('visible');
+        }
+    });
+
+</script>
+</html>
